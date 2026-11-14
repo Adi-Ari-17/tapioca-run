@@ -17,7 +17,6 @@ func load_menu() -> void:
 	menu_scene.game_start.connect(game_starting)
 
 func game_starting() -> void:
-	print("game shall start in like 30 mins")
 	if player:
 		player.set_physics_process(true)
 	change_level(GameManager.current_level, GameManager.spawn_pos)
