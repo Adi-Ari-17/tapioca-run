@@ -5,14 +5,19 @@ const JUMP_VELOCITY = -325.0
 var touched_floor: = true
 var prev_velocity = 0.0
 var jump_buffer_timer: float = 0.0
-
+var jump_buffer_duration: float = 0.12
 
 func _physics_process(delta: float) -> void:
+	if jump_buffer_timer > 0.0:
+		jump_buffer_timer -= delta
 	if not is_on_floor():
 		prev_velocity = velocity.y
 		velocity += get_gravity() * delta
 	if Input.is_action_just_pressed("up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	if jump_buffer_timer > 0.0 and is_on_floor():
+			velocity.y = JUMP_VELOCITY
+			jump_buffer_timer = 0.0
 	if Input.is_action_just_released("up") and velocity.y < 0:
 		velocity.y = 0
 	var direction := Input.get_axis("left", "right")
