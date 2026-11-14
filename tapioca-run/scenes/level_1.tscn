@@ -2,7 +2,22 @@
 
 [sub_resource type="TileSet" id="TileSet_6mc5i"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mc5i"]
+size = Vector2(493, 20)
+
 [node name="level1" type="Node2D" unique_id=1795356896]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1859477627]
 tile_set = SubResource("TileSet_6mc5i")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1036258661]
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=1018760889]
+offset_left = -228.0
+offset_top = 52.0
+offset_right = 265.0
+offset_bottom = 72.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=399604404]
+position = Vector2(18.5, 62)
+shape = SubResource("RectangleShape2D_6mc5i")

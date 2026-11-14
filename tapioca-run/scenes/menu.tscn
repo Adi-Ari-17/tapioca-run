@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://b8w4yqtj0sb7r"]
+
+[ext_resource type="Script" uid="uid://dri0x0igl03bm" path="res://scripts/menu.gd" id="1_yqeox"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6mc5i"]
+font_size = 55
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="menu" type="Node2D" unique_id=1028276986]
+script = ExtResource("1_yqeox")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1967712606]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1910807541]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.69409156, 0.5130105, 0.44803417, 1)
+
+[node name="start" type="Button" parent="CanvasLayer" unique_id=1798391521]
+offset_left = 481.0
+offset_top = 368.0
+offset_right = 577.0
+offset_bottom = 399.0
+text = "Start Game"
+
+[node name="credits" type="Button" parent="CanvasLayer" unique_id=1501865723]
+offset_left = 498.0
+offset_top = 422.0
+offset_right = 559.0
+offset_bottom = 453.0
+text = "credits
+"
+
+[node name="settings" type="Button" parent="CanvasLayer" unique_id=944355835]
+offset_left = 495.0
+offset_top = 480.0
+offset_right = 564.0
+offset_bottom = 511.0
+text = "settings
+"
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1941178479]
+offset_left = 380.0
+offset_top = 195.0
+offset_right = 704.0
+offset_bottom = 271.0
+text = "Tapioca Run"
+label_settings = SubResource("LabelSettings_6mc5i")
+
+[connection signal="pressed" from="CanvasLayer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings" to="." method="_on_settings_pressed"]
