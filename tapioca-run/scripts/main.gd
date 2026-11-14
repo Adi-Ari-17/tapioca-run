@@ -17,7 +17,12 @@ func _ready() -> void:
 		hud.hide()
 	load_menu()
 	
-
+	
+func _physics_process(delta: float) -> void:
+	if GameManager.menu:
+		GameManager.menu = false
+		load_menu()
+		
 func load_menu() -> void:
 	var menu_scene = load("res://scenes/menu.tscn").instantiate()
 	level_node.add_child(menu_scene)

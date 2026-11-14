@@ -35,6 +35,8 @@ func _physics_process(delta: float) -> void:
 		elif state == "sugar":
 			state = "normal"
 		
+	if GameManager.countdown <= 0:
+		GameManager.menu = true
 	move_and_slide()
 
 func _on_animation_finished(anim_name: StringName) -> void:

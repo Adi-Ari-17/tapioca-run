@@ -5,7 +5,7 @@ signal game_start
 
 func _on_start_pressed() -> void:
 	game_start.emit()
-
+	GameManager.countdown = 5
 func _on_credits_pressed() -> void:
 	pass # Replace with function body.
 

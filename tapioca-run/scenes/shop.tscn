@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cx3vv8aw2mirp"]
+
+[ext_resource type="Script" uid="uid://biw1ogn457f1r" path="res://Shop.gd" id="1_lx5au"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xfvoa"]
+font_size = 55
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="shop" type="Node2D" unique_id=1761433747]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=93764978]
+script = ExtResource("1_lx5au")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1258653488]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.69409156, 0.5130105, 0.44803417, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="countdown" type="Button" parent="CanvasLayer" unique_id=1999365787]
+offset_left = 177.0
+offset_top = 221.0
+offset_right = 364.0
+offset_bottom = 340.0
+text = "Countdown"
+
+[node name="Pearl" type="Button" parent="CanvasLayer" unique_id=2065725093]
+offset_left = 175.0
+offset_top = 410.0
+offset_right = 359.0
+offset_bottom = 525.0
+text = "New Pearl"
+
+[node name="idk" type="Button" parent="CanvasLayer" unique_id=962100626]
+offset_left = 563.0
+offset_top = 223.0
+offset_right = 740.0
+offset_bottom = 340.0
+text = "idk"
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1937225955]
+offset_left = 97.0
+offset_top = 64.0
+offset_right = 421.0
+offset_bottom = 140.0
+text = "Shop"
+label_settings = SubResource("LabelSettings_xfvoa")
+
+[connection signal="pressed" from="CanvasLayer/countdown" to="CanvasLayer" method="_on_countdown_pressed"]

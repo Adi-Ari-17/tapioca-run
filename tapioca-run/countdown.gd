@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 			GameManager.countdown -= 1
 			label.text = str(GameManager.countdown)
 			if GameManager.countdown <= 0:
-				pass
+				queue_free()
 		_trigger()
 
 func _trigger() -> void:
