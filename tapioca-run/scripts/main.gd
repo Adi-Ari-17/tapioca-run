@@ -35,3 +35,12 @@ func change_level(level: String, spawn_pos: Vector2) -> void:
 	if new_level:
 		current_level_node = new_level.instantiate()
 		level_node.add_child(current_level_node)
+	if player:
+		player.set_physics_process(true)
+		player.global_position = spawn_pos
+		player.process_mode = Node.PROCESS_MODE_INHERIT
+		player.show()
+	if transition_layer:
+		transition_layer.fade_out()
+		await get_tree().create_timer(0.5).timeout
+		GameManager.controls_allowed = true
