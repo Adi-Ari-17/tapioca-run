@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://5ehdhn86s5s7"]
+
+[ext_resource type="Script" uid="uid://cjc53ktu78b2x" path="res://countdown.gd" id="1_6e84v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6mc5i"]
+font_size = 64
+
+[node name="countdown" type="Node2D" unique_id=1009133850]
+script = ExtResource("1_6e84v")
+
+[node name="Label" type="Label" parent="." unique_id=1448555635]
+offset_left = 554.0
+offset_top = 73.0
+offset_right = 892.0
+offset_bottom = 167.0
+text = "1"
+label_settings = SubResource("LabelSettings_6mc5i")
