@@ -1,21 +1,21 @@
 extends Node2D
 
 @onready var label: Label = $Label
-
+signal return_to_menu
 var waiting: bool = false
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	label.text = str(GameManager.countdown)
 	GameManager.countdown = GameManager.count
   
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if GameManager.countstart:
 		if not waiting:
 			GameManager.countdown -= 1
 			label.text = str(GameManager.countdown)
 			if GameManager.countdown <= 0:
+				return_to_menu.emit()
+				GameManager.showCount = false
 				queue_free()
 		_trigger()
 

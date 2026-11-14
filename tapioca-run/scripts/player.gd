@@ -8,6 +8,14 @@ var jump_buffer_timer: float = 0.0
 var jump_buffer_duration: float = 0.12
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+func _ready() -> void:
+	if state == "normal":
+		animation_player.play("idle-normal")
+	elif state == "pop":
+		animation_player.play("idle-pop")
+	elif state == "sugar":
+		animation_player.play("idle-sugar")
+
 func _physics_process(delta: float) -> void:
 	if jump_buffer_timer > 0.0:
 		jump_buffer_timer -= delta
@@ -34,9 +42,6 @@ func _physics_process(delta: float) -> void:
 			state = "sugar"
 		elif state == "sugar":
 			state = "normal"
-		
-	if GameManager.countdown <= 0:
-		GameManager.menu = true
 	move_and_slide()
 
 func _on_animation_finished(anim_name: StringName) -> void:
@@ -46,3 +51,7 @@ func _on_animation_finished(anim_name: StringName) -> void:
 		animation_player.play("idle-pop")
 	if anim_name == "down-bounce-sugar":
 		animation_player.play("idle-sugar")
+
+func _on_hurbox_entered(area: Area2D) -> void:
+	if area.is_in_group("hazard"):
+		animation_player.play("die")

@@ -89,3 +89,5 @@ position = Vector2(-4, 8)
 
 [node name="hud" parent="GUI" unique_id=1661951141 instance=ExtResource("4_jyhfs")]
 position = Vector2(107, 48)
+
+[connection signal="return_to_menu" from="GUI/countdown" to="." method="return_to_menu"]

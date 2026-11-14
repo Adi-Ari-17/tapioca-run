@@ -36,7 +36,7 @@ offset_bottom = 432.0
 text = "credits
 "
 
-[node name="settings" type="Button" parent="CanvasLayer" unique_id=944355835]
+[node name="shop" type="Button" parent="CanvasLayer" unique_id=944355835]
 offset_left = 140.0
 offset_top = 453.0
 offset_right = 209.0
@@ -53,4 +53,4 @@ label_settings = SubResource("LabelSettings_6mc5i")
 
 [connection signal="pressed" from="CanvasLayer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CanvasLayer/credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="CanvasLayer/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="CanvasLayer/shop" to="." method="_on_shop_pressed"]

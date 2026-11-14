@@ -27,9 +27,7 @@ func load_menu() -> void:
 	var menu_scene = load("res://scenes/menu.tscn").instantiate()
 	level_node.add_child(menu_scene)
 	menu_scene.game_start.connect(game_starting)
-	
 
-	
 func game_starting() -> void:
 	if player:
 		player.set_physics_process(true)
@@ -62,3 +60,20 @@ func change_level(level: String, spawn_pos: Vector2) -> void:
 		transition_layer.fade_out()
 		await get_tree().create_timer(0.5).timeout
 		GameManager.controls_allowed = true
+
+func return_to_menu() -> void:
+	GameManager.controls_allowed = false
+	if player:
+		player.hide()
+		player.set_physics_process(false)
+	if hud:
+		hud.hide()
+	if transition_layer:
+		await transition_layer.fade_in()
+	for child in level_node.get_children():
+		child.queue_free()
+	var menu_scene = load("res://scenes/menu.tscn").instantiate()
+	level_node.add_child(menu_scene)
+	if transition_layer:
+		transition_layer.fade_out()
+	

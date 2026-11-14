@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5ehdhn86s5s7"]
 
-[ext_resource type="Script" uid="uid://cjc53ktu78b2x" path="res://countdown.gd" id="1_6e84v"]
+[ext_resource type="Script" uid="uid://cjc53ktu78b2x" path="res://scripts/countdown.gd" id="1_6e84v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6mc5i"]
 font_size = 64
