@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dacxtg0q5x3a8"]
+
+[ext_resource type="Texture2D" uid="uid://bm41vtf3pxpjw" path="res://assets/sprites/hud.png" id="1_ahhtf"]
+[ext_resource type="Script" uid="uid://5t8byitqoo40" path="res://scripts/hud.gd" id="1_oo0fn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6mc5i"]
+
+[node name="Node2D" type="Node2D" unique_id=1661951141]
+scale = Vector2(2, 2)
+script = ExtResource("1_oo0fn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1985255572]
+scale = Vector2(2, 2)
+texture = ExtResource("1_ahhtf")
+
+[node name="Label" type="Label" parent="." unique_id=247882695]
+offset_left = -1.9999999
+offset_top = -7.9999995
+offset_right = 32.587326
+offset_bottom = 15.0
+scale = Vector2(0.95410675, 0.6600145)
+label_settings = SubResource("LabelSettings_6mc5i")
