@@ -19,6 +19,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.69409156, 0.5130105, 0.44803417, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="start" type="Button" parent="CanvasLayer" unique_id=1798391521]
 offset_left = 129.0

@@ -8,3 +8,4 @@ var countdown: int = 0
 var count: int = 11
 var countstart: bool = false
 var menu: bool = false
+var showCount: bool = false

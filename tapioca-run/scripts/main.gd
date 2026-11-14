@@ -27,7 +27,9 @@ func load_menu() -> void:
 	var menu_scene = load("res://scenes/menu.tscn").instantiate()
 	level_node.add_child(menu_scene)
 	menu_scene.game_start.connect(game_starting)
+	
 
+	
 func game_starting() -> void:
 	if player:
 		player.set_physics_process(true)
