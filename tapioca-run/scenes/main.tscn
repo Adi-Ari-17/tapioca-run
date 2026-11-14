@@ -87,5 +87,5 @@ libraries/ = SubResource("AnimationLibrary_tefeu")
 [node name="countdown" parent="GUI" unique_id=1009133850 instance=ExtResource("5_tbgi4")]
 position = Vector2(-4, 8)
 
-[node name="Node2D" parent="GUI" unique_id=1661951141 instance=ExtResource("4_jyhfs")]
+[node name="hud" parent="GUI" unique_id=1661951141 instance=ExtResource("4_jyhfs")]
 position = Vector2(107, 48)

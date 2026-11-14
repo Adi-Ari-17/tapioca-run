@@ -10,12 +10,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if not waiting:
-		GameManager.countdown -= 1
-		label.text = str(GameManager.countdown)
-		if GameManager.countdown <= 0:
-			pass
-	_trigger()
+	if GameManager.countstart:
+		if not waiting:
+			GameManager.countdown -= 1
+			label.text = str(GameManager.countdown)
+			if GameManager.countdown <= 0:
+				pass
+		_trigger()
 
 func _trigger() -> void:
 	if waiting:

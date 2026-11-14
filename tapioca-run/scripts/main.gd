@@ -4,12 +4,19 @@ extends Node2D
 @onready var player: CharacterBody2D = $Player
 @onready var transition_layer: Node = $GUI/TransitionLayer
 @onready var current_level_node: Node = null
+@onready var countdown: Node = $GUI/countdown
+@onready var hud: Node = $GUI/hud
 
 func _ready() -> void:
 	if player:
 		player.hide()
 		player.process_mode = PROCESS_MODE_DISABLED
+	if countdown:
+		countdown.hide()
+	if hud:
+		hud.hide()
 	load_menu()
+	
 
 func load_menu() -> void:
 	var menu_scene = load("res://scenes/menu.tscn").instantiate()
@@ -20,6 +27,11 @@ func game_starting() -> void:
 	if player:
 		player.set_physics_process(true)
 	change_level(GameManager.current_level, GameManager.spawn_pos)
+	if countdown:
+		countdown.show()
+		GameManager.countstart = true
+	if hud:
+		hud.show()
 
 func change_level(level: String, spawn_pos: Vector2) -> void:
 	GameManager.controls_allowed = false
