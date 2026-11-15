@@ -146,24 +146,519 @@ texture = ExtResource("1_rus8k")
 vframes = 2
 
 [node name="Parallax2D" type="Parallax2D" parent="background" unique_id=1745909809]
+scroll_scale = Vector2(0.25, 1)
+
+[node name="Sprite2D46" type="Sprite2D" parent="background/Parallax2D" unique_id=356639036]
+position = Vector2(39.432827, -26.003538)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D47" type="Sprite2D" parent="background/Parallax2D" unique_id=150421136]
+position = Vector2(351.99997, -53)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D48" type="Sprite2D" parent="background/Parallax2D" unique_id=1502530743]
+position = Vector2(120, 25)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D49" type="Sprite2D" parent="background/Parallax2D" unique_id=465710509]
+position = Vector2(572, 89.999985)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D52" type="Sprite2D" parent="background/Parallax2D" unique_id=426101549]
+position = Vector2(1102, 17.000015)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D51" type="Sprite2D" parent="background/Parallax2D" unique_id=333920626]
+position = Vector2(945, -26.00003)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Sprite2D50" type="Sprite2D" parent="background/Parallax2D" unique_id=1612756778]
+position = Vector2(697, -33)
+rotation = 3.1415925
+scale = Vector2(2.5, -2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Sprite2D53" type="Sprite2D" parent="background/Parallax2D" unique_id=585506000]
+position = Vector2(1244, -85)
+rotation = 3.1415925
+scale = Vector2(-2.5, -2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Sprite2D54" type="Sprite2D" parent="background/Parallax2D" unique_id=1889770287]
+position = Vector2(1546, 124.01602)
+scale = Vector2(2.0000005, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D56" type="Sprite2D" parent="background/Parallax2D" unique_id=1793593335]
+position = Vector2(1546, 334)
+scale = Vector2(2.0000005, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D55" type="Sprite2D" parent="background/Parallax2D" unique_id=1726631925]
+position = Vector2(1511, -123.98398)
+rotation = 3.1415925
+scale = Vector2(2.5, -3.204)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Sprite2D57" type="Sprite2D" parent="background/Parallax2D" unique_id=1475694792]
+position = Vector2(1860, -44.98398)
+scale = Vector2(2.0000005, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D58" type="Sprite2D" parent="background/Parallax2D" unique_id=494538303]
+position = Vector2(1860, 165)
+scale = Vector2(2.0000005, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D59" type="Sprite2D" parent="background/Parallax2D" unique_id=1388344725]
+position = Vector2(1860, -293)
+rotation = 3.1415925
+scale = Vector2(-2.5, -3.204)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Sprite2D60" type="Sprite2D" parent="background/Parallax2D" unique_id=1700039442]
+position = Vector2(2298, -303)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D61" type="Sprite2D" parent="background/Parallax2D" unique_id=593708422]
+position = Vector2(2299, -106.000015)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D62" type="Sprite2D" parent="background/Parallax2D" unique_id=985832393]
+position = Vector2(2300, 93.000015)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D63" type="Sprite2D" parent="background/Parallax2D" unique_id=878645622]
+position = Vector2(2156, -194)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D64" type="Sprite2D" parent="background/Parallax2D" unique_id=928328917]
+position = Vector2(2157, 2.999977)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D65" type="Sprite2D" parent="background/Parallax2D" unique_id=1092840457]
+position = Vector2(2158, 202)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D66" type="Sprite2D" parent="background/Parallax2D" unique_id=962342500]
+position = Vector2(2458, -429)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D67" type="Sprite2D" parent="background/Parallax2D" unique_id=937661285]
+position = Vector2(2459, -232)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D68" type="Sprite2D" parent="background/Parallax2D" unique_id=1226246934]
+position = Vector2(2460, -32.999985)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D69" type="Sprite2D" parent="background/Parallax2D" unique_id=915555920]
+position = Vector2(2612, -274)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D70" type="Sprite2D" parent="background/Parallax2D" unique_id=1827320893]
+position = Vector2(2613, -77.000015)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D71" type="Sprite2D" parent="background/Parallax2D" unique_id=1540669271]
+position = Vector2(2614, 122)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D72" type="Sprite2D" parent="background/Parallax2D" unique_id=1861993712]
+position = Vector2(2778, -539)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D73" type="Sprite2D" parent="background/Parallax2D" unique_id=381923815]
+position = Vector2(2779, -342)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D74" type="Sprite2D" parent="background/Parallax2D" unique_id=1802164035]
+position = Vector2(2780, -142.99997)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D75" type="Sprite2D" parent="background/Parallax2D" unique_id=862791935]
+position = Vector2(2004, -119.00003)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D76" type="Sprite2D" parent="background/Parallax2D" unique_id=958458535]
+position = Vector2(2005, 77.99997)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D77" type="Sprite2D" parent="background/Parallax2D" unique_id=341629148]
+position = Vector2(2006, 277)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D78" type="Sprite2D" parent="background/Parallax2D" unique_id=1862887279]
+position = Vector2(1702, 62.999985)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D79" type="Sprite2D" parent="background/Parallax2D" unique_id=510483766]
+position = Vector2(1703, 260)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D80" type="Sprite2D" parent="background/Parallax2D" unique_id=297010377]
+position = Vector2(1704, 459)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D81" type="Sprite2D" parent="background/Parallax2D" unique_id=168197125]
+position = Vector2(445.00012, -197.99998)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D82" type="Sprite2D" parent="background/Parallax2D" unique_id=1318790220]
+position = Vector2(446.00012, -0.9999695)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D83" type="Sprite2D" parent="background/Parallax2D" unique_id=577085970]
+position = Vector2(447.00012, 198.00003)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D84" type="Sprite2D" parent="background/Parallax2D" unique_id=2115484128]
+position = Vector2(220.00002, -118.99999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D85" type="Sprite2D" parent="background/Parallax2D" unique_id=1513319704]
+position = Vector2(221.00002, 78.00002)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D86" type="Sprite2D" parent="background/Parallax2D" unique_id=1375244774]
+position = Vector2(222.00002, 277.00003)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D87" type="Sprite2D" parent="background/Parallax2D" unique_id=64963976]
+position = Vector2(2986.5935, -529.0829)
+rotation = 3.1415925
+scale = Vector2(2.512363, -3.202168)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Sprite2D88" type="Sprite2D" parent="background/Parallax2D" unique_id=141823208]
+position = Vector2(3022, -296.98398)
+scale = Vector2(2.0000005, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D89" type="Sprite2D" parent="background/Parallax2D" unique_id=2066998228]
+position = Vector2(3022, -90.98399)
+scale = Vector2(2.0000005, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D90" type="Sprite2D" parent="background/Parallax2D" unique_id=1328635430]
+position = Vector2(3455.5935, -528.0829)
+rotation = 3.1415925
+scale = Vector2(2.512363, -3.202168)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Sprite2D91" type="Sprite2D" parent="background/Parallax2D" unique_id=739604917]
+position = Vector2(3491, -295.98398)
+scale = Vector2(2.0000005, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D92" type="Sprite2D" parent="background/Parallax2D" unique_id=1439285017]
+position = Vector2(3491, -89.98399)
+scale = Vector2(2.0000005, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D93" type="Sprite2D" parent="background/Parallax2D" unique_id=1450042545]
+position = Vector2(3334, -501)
+scale = Vector2(2.5, 3.2037034)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Sprite2D94" type="Sprite2D" parent="background/Parallax2D" unique_id=611741070]
+position = Vector2(3334, -255)
+scale = Vector2(2.0000005, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D95" type="Sprite2D" parent="background/Parallax2D" unique_id=941939382]
+position = Vector2(3334, -49.000015)
+scale = Vector2(2.0000005, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D96" type="Sprite2D" parent="background/Parallax2D" unique_id=1027337576]
+position = Vector2(3181, -558)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D97" type="Sprite2D" parent="background/Parallax2D" unique_id=353293880]
+position = Vector2(3182, -360.99994)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D98" type="Sprite2D" parent="background/Parallax2D" unique_id=1294328531]
+position = Vector2(3183, -161.99997)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D99" type="Sprite2D" parent="background/Parallax2D" unique_id=1520673453]
+position = Vector2(3611, -429)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D100" type="Sprite2D" parent="background/Parallax2D" unique_id=1606251609]
+position = Vector2(3612, -231.99995)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D101" type="Sprite2D" parent="background/Parallax2D" unique_id=354964955]
+position = Vector2(3613, -32.999985)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D102" type="Sprite2D" parent="background/Parallax2D" unique_id=19030974]
+position = Vector2(2902, -429)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D103" type="Sprite2D" parent="background/Parallax2D" unique_id=884335621]
+position = Vector2(2903, -231.99995)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D104" type="Sprite2D" parent="background/Parallax2D" unique_id=1392068429]
+position = Vector2(2904, -32.999985)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D105" type="Sprite2D" parent="background/Parallax2D" unique_id=1887467240]
+position = Vector2(3741, -642)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D106" type="Sprite2D" parent="background/Parallax2D" unique_id=864830113]
+position = Vector2(3742, -444.99994)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D107" type="Sprite2D" parent="background/Parallax2D" unique_id=406335053]
+position = Vector2(3743, -245.99997)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
 
 [node name="ColorRect" type="ColorRect" parent="background/Parallax2D" unique_id=1379246029]
-offset_left = -1290.0
-offset_top = -1388.0
-offset_right = 3695.0
-offset_bottom = 1020.0
+offset_left = -1158.0
+offset_top = -1589.0
+offset_right = 3827.0
+offset_bottom = 819.0
 color = Color(1, 1, 1, 0.3647059)
 
-[node name="Parallax2D2" type="Parallax2D" parent="background" unique_id=972147035]
-visible = false
-
-[node name="Parallax2D4" type="Parallax2D" parent="background" unique_id=759777031]
-visible = false
-
-[node name="Parallax2D5" type="Parallax2D" parent="background" unique_id=1706703211]
-visible = false
-
 [node name="Parallax2D3" type="Parallax2D" parent="background" unique_id=1040043356]
+scroll_scale = Vector2(0.5, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="background/Parallax2D3" unique_id=142535490]
 position = Vector2(-19.999992, 44.999985)
@@ -174,7 +669,7 @@ vframes = 2
 frame = 2
 
 [node name="Sprite2D2" type="Sprite2D" parent="background/Parallax2D3" unique_id=102982123]
-position = Vector2(489.99997, 32)
+position = Vector2(506, 33)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("1_rus8k")
 hframes = 2
@@ -182,7 +677,7 @@ vframes = 2
 frame = 2
 
 [node name="Sprite2D3" type="Sprite2D" parent="background/Parallax2D3" unique_id=1564037435]
-position = Vector2(262, -30.00003)
+position = Vector2(260, -13.0000305)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("1_rus8k")
 hframes = 2
@@ -255,6 +750,78 @@ frame = 2
 
 [node name="Sprite2D29" type="Sprite2D" parent="background/Parallax2D3" unique_id=55469613]
 position = Vector2(2091, 155)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D55" type="Sprite2D" parent="background/Parallax2D3" unique_id=351105707]
+position = Vector2(3046, -418)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D56" type="Sprite2D" parent="background/Parallax2D3" unique_id=2126342800]
+position = Vector2(3047, -220.99997)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D57" type="Sprite2D" parent="background/Parallax2D3" unique_id=661992612]
+position = Vector2(3048, -21.999977)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D58" type="Sprite2D" parent="background/Parallax2D3" unique_id=263891538]
+position = Vector2(3358, -405)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D59" type="Sprite2D" parent="background/Parallax2D3" unique_id=814344065]
+position = Vector2(3359, -207.99997)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D60" type="Sprite2D" parent="background/Parallax2D3" unique_id=398299660]
+position = Vector2(3360, -8.999978)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D61" type="Sprite2D" parent="background/Parallax2D3" unique_id=1273222419]
+position = Vector2(3663, -600)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D62" type="Sprite2D" parent="background/Parallax2D3" unique_id=487691479]
+position = Vector2(3664, -402.99994)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D63" type="Sprite2D" parent="background/Parallax2D3" unique_id=1298468726]
+position = Vector2(3665, -203.99997)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("1_rus8k")
 hframes = 2
@@ -351,6 +918,22 @@ frame = 2
 
 [node name="Sprite2D23" type="Sprite2D" parent="background/Parallax2D3" unique_id=705349618]
 position = Vector2(1481, 337)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D52" type="Sprite2D" parent="background/Parallax2D3" unique_id=1151270918]
+position = Vector2(1197, 176)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D53" type="Sprite2D" parent="background/Parallax2D3" unique_id=472819190]
+position = Vector2(1197.9999, 375.00003)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("1_rus8k")
 hframes = 2
@@ -477,6 +1060,46 @@ hframes = 2
 vframes = 2
 frame = 2
 
+[node name="Sprite2D46" type="Sprite2D" parent="background/Parallax2D3" unique_id=1003935097]
+position = Vector2(3238, -480)
+scale = Vector2(2.5, 3.2037034)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Sprite2D47" type="Sprite2D" parent="background/Parallax2D3" unique_id=390336465]
+position = Vector2(3238, -234)
+scale = Vector2(2.0000005, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D48" type="Sprite2D" parent="background/Parallax2D3" unique_id=1306278919]
+position = Vector2(3238, -28.000015)
+scale = Vector2(2.0000005, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D50" type="Sprite2D" parent="background/Parallax2D3" unique_id=443024745]
+position = Vector2(3502, -124.98401)
+scale = Vector2(2.0000005, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Sprite2D51" type="Sprite2D" parent="background/Parallax2D3" unique_id=271193609]
+position = Vector2(3502, 81.015976)
+scale = Vector2(2.0000005, 2.5)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 2
+
 [node name="Sprite2D34" type="Sprite2D" parent="background/Parallax2D3" unique_id=1250755970]
 position = Vector2(2375, 137.01599)
 scale = Vector2(2.0000005, 2.5)
@@ -495,6 +1118,14 @@ frame = 3
 
 [node name="Sprite2D42" type="Sprite2D" parent="background/Parallax2D3" unique_id=115958433]
 position = Vector2(2340, -316.984)
+scale = Vector2(-2.5, 3.204)
+texture = ExtResource("1_rus8k")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Sprite2D49" type="Sprite2D" parent="background/Parallax2D3" unique_id=219622954]
+position = Vector2(3465, -370.98398)
 scale = Vector2(-2.5, 3.204)
 texture = ExtResource("1_rus8k")
 hframes = 2
