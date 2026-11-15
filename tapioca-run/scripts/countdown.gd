@@ -11,21 +11,12 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if counting:
-		if not waiting:
-			GameManager.countdown -= 1
-			label.text = str(GameManager.countdown)
-			if GameManager.countdown <= 0:
-				shop_load.emit()
-				counting = false
-				hide()
-		_trigger()
+		label.text = str(GameManager.countdown)
+		if GameManager.countdown <= 0:
+			shop_load.emit()
+			counting = false
+			hide()
 
-func _trigger() -> void:
-	if waiting:
-		return
-	waiting = true
-	await get_tree().create_timer(1.0).timeout
-	waiting = false
 
 func _on_main_countstart() -> void:
 	counting = true
