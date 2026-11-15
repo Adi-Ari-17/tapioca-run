@@ -242,7 +242,7 @@ z_index = 10
 position = Vector2(0, -8)
 texture = ExtResource("2_g2els")
 hframes = 5
-vframes = 6
+vframes = 9
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1464659142]
 libraries/ = SubResource("AnimationLibrary_qhqgy")
