@@ -2,6 +2,10 @@ extends CanvasLayer
 
 signal menu_load
 
+@onready var label: Label = $countdown/Label
+
+func _physics_process(delta: float) -> void:
+	label.text = str(GameManager.count_max - 1)
 func _on_back_pressed() -> void:
 	menu_load.emit()
 

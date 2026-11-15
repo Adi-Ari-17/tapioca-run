@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://15e3vgl2xjrq" path="res://scripts/shop.gd" id="1_lx5au"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_6mc5i"]
+font_size = 12
+
 [sub_resource type="LabelSettings" id="LabelSettings_xfvoa"]
 font_size = 55
 outline_size = 2
@@ -24,6 +27,14 @@ offset_top = 210.0
 offset_right = 493.0
 offset_bottom = 329.0
 text = "Countdown"
+
+[node name="Label" type="Label" parent="countdown" unique_id=1865517147]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 74.0
+offset_right = 112.0
+offset_bottom = 97.0
+label_settings = SubResource("LabelSettings_6mc5i")
 
 [node name="idk2" type="Button" parent="." unique_id=605792678]
 offset_left = 573.0
