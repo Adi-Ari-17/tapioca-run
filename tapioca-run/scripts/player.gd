@@ -62,3 +62,4 @@ func _on_hurbox_entered(area: Area2D) -> void:
 		velocity = Vector2(300, -400)
 		await get_tree().create_timer(0.5).timeout
 		GameManager.controls_allowed = true
+		

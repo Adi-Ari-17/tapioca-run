@@ -28,8 +28,8 @@ func load_menu() -> void:
 
 func game_starting() -> void:
 	print("game start")
-	if player:
-		player.set_physics_process(true)
+	if GameManager.first_time:
+		pass
 	change_level(GameManager.current_level, GameManager.spawn_pos)
 	
 

@@ -7,3 +7,4 @@ var coins: int = 0
 var countdown: int = 0
 var count_max: int = 11
 var timecost: int = 5
+var first_time: bool = true
