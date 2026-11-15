@@ -14,7 +14,8 @@ var was_airborne: bool = false
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var hitfx: GPUParticles2D = $HitFX/GPUParticles2D
 @onready var wall_progress_bar: ProgressBar = $ProgressBar
-
+@onready var pop_sound: AudioStreamPlayer = $pop
+@onready var bounce_sound: AudioStreamPlayer = $bounce
 func _ready() -> void:
 	update_animation()
 	wall_progress_bar.visible = false
@@ -41,6 +42,8 @@ func _physics_process(delta: float) -> void:
 		# Ground landing bounce (triggers once on landing)
 		if was_airborne and touched_floor:
 			play_bounce_animation()
+			bounce_sound.play()
+			
 			if GameManager.player_state == "sugar":
 				velocity.y = -250.0 
 				GameManager.countdown -= 1
@@ -94,6 +97,7 @@ func _physics_process(delta: float) -> void:
 				velocity.y = -280.0
 				can_double_jump = false 
 				animation_player.play("double jump pop")
+				pop_sound.play()
 				
 		if Input.is_action_just_pressed("interact"):
 			try_switch_state()
