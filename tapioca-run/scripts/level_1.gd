@@ -6,7 +6,7 @@ extends Node2D
 
 func _ready() -> void:
 	var player = get_node("../../Player")
-	player.change_camera_limits(-140, -507, 2739, 201)
+	player.change_camera_limits(-140, -507, 3019, 1215)
 	label.show()
 	label2.show()
 	label3.show()
