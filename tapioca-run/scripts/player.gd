@@ -5,12 +5,10 @@ var touched_floor = true
 var can_double_jump = false
 var wall_cooldown_timer: float = 0.0
 const WALL_COOLDOWN_DURATION: float = 2.0
-
-# Grace period tracking variables
 var was_wall_sliding: bool = false
 var wall_time_elapsed: float = 0.0
 const WALL_GRACE_PERIOD: float = 0.25
-
+@onready var cam: Camera2D = $Camera2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var hitfx: GPUParticles2D = $HitFX/GPUParticles2D
 @onready var wall_progress_bar: ProgressBar = $ProgressBar
@@ -27,7 +25,6 @@ func _physics_process(delta: float) -> void:
 		wall_progress_bar.value = wall_cooldown_timer
 	else:
 		wall_progress_bar.visible = false
-
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	else:
@@ -39,21 +36,17 @@ func _physics_process(delta: float) -> void:
 
 	if GameManager.controls_allowed == true:
 		var direction := Input.get_axis("left", "right")
-		
 		var can_wall_slide = not is_on_floor() and is_on_wall() and GameManager.player_state == "sugar" and wall_cooldown_timer <= 0
 		var is_pushing_against_wall = (direction < 0 and $Sprite2D.flip_h) or (direction > 0 and not $Sprite2D.flip_h)
-		
 		if can_wall_slide and (is_pushing_against_wall or Input.is_action_pressed("up") or Input.is_action_pressed("down")):
 			was_wall_sliding = true
 			wall_time_elapsed += delta 
-			
 			if Input.is_action_pressed("up"):
 				velocity.y = -150.0 
 			elif Input.is_action_pressed("down"):
 				velocity.y = 150.0 
 			else:
 				velocity.y = min(velocity.y, 40.0)
-				
 			if direction != 0:
 				velocity.x = direction * SPEED
 				$Sprite2D.flip_h = (direction < 0)
@@ -63,16 +56,13 @@ func _physics_process(delta: float) -> void:
 			if was_wall_sliding and (is_on_floor() or not is_on_wall()):
 				if wall_time_elapsed >= WALL_GRACE_PERIOD:
 					wall_cooldown_timer = WALL_COOLDOWN_DURATION
-					
 				was_wall_sliding = false
 				wall_time_elapsed = 0.0
-
 			if direction:
 				velocity.x = direction * SPEED
 				$Sprite2D.flip_h = (direction < 0) 
 			else:
 				velocity.x = move_toward(velocity.x, 0, SPEED)
-				
 		if is_on_floor() and touched_floor:
 			play_bounce_animation()
 			if GameManager.player_state == "sugar":
@@ -81,29 +71,20 @@ func _physics_process(delta: float) -> void:
 			else:
 				GameManager.countdown -= 1
 				velocity.y = -325.0 
-				
 		if Input.is_action_just_pressed("up") and not is_on_floor():
 			if GameManager.player_state == "pop" and can_double_jump:
 				velocity.y = -280.0
 				can_double_jump = false 
-				
-		# Switch state when pressing interact (checks if player has enough currency and unlocked states)
 		if Input.is_action_just_pressed("interact"):
 			try_switch_state()
 			
 	move_and_slide()
 
 func try_switch_state() -> void:
-	# Check if player has at least 50 countdown currency
 	if GameManager.countdown >= 50:
 		var current_index = GameManager.unlocked_states.find(GameManager.player_state)
-		
-		# If current state is valid and there are multiple unlocked states to cycle through
 		if current_index != -1 and GameManager.unlocked_states.size() > 1:
-			# Deduct cost
 			GameManager.countdown -= 50
-			
-			# Move to the next unlocked state in the array, wrapping around if at the end
 			var next_index = (current_index + 1) % GameManager.unlocked_states.size()
 			GameManager.player_state = GameManager.unlocked_states[next_index]
 			
@@ -142,5 +123,10 @@ func _on_hurbox_entered(area: Area2D) -> void:
 		velocity = Vector2(-200 * dir, -300)
 		GameManager.countdown -= 10
 		hitfx.restart()
+		if cam:
+			for i in range(5):
+				cam.offset = Vector2(randf_range(-10, 10), randf_range(-10, 10))
+				await get_tree().create_timer(0.03).timeout
+			cam.offset = Vector2.ZERO
 		await get_tree().create_timer(0.5).timeout
 		GameManager.controls_allowed = true
