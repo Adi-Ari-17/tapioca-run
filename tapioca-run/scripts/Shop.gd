@@ -27,3 +27,7 @@ func _on_countdown_pressed() -> void:
 
 func _on_play_pressed() -> void:
 	game_start.emit()
+
+
+func _on_pearl_1_pressed() -> void:
+	GameManager.unlocked_states.append("pop")

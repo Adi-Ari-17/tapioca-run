@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cx3vv8aw2mirp"]
 
-[ext_resource type="Script" uid="uid://15e3vgl2xjrq" path="res://scripts/Shop.gd" id="1_lx5au"]
+[ext_resource type="Script" uid="uid://15e3vgl2xjrq" path="res://scripts/shop.gd" id="1_lx5au"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6mc5i"]
 font_size = 10
@@ -58,7 +58,7 @@ offset_right = 760.0
 offset_bottom = 501.0
 text = "idk"
 
-[node name="Pearl" type="Button" parent="." unique_id=2065725093]
+[node name="Pearl1" type="Button" parent="." unique_id=2065725093]
 offset_left = 308.0
 offset_top = 382.0
 offset_right = 492.0
@@ -107,5 +107,6 @@ offset_bottom = 617.0
 text = "Play"
 
 [connection signal="pressed" from="countdown" to="." method="_on_countdown_pressed"]
+[connection signal="pressed" from="Pearl1" to="." method="_on_pearl_1_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
