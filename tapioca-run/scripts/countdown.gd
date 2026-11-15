@@ -1,14 +1,14 @@
 extends Node2D
 
 @onready var label: Label = $Label
-@onready var main: Node2D = $"../Main"
+@onready var main: Node2D = null
 signal return_to_menu
 var waiting: bool = false
 var counting
   
 func _ready() -> void:
 	main = get_tree().root.get_node("Main")
-	main.countstart.connect(_on_main_countstart)
+	#main.countstart.connect(_on_main_countstart)
 
 func _process(_delta: float) -> void:
 	if counting:
@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
 			label.text = str(GameManager.countdown)
 			if GameManager.countdown <= 0:
 				return_to_menu.emit()
-				main.countstart.connect(_on_main_countstart)
+				#main.countstart.connect(_on_main_countstart)
 				counting = false
 				hide()
 		_trigger()

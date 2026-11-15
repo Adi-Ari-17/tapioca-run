@@ -24,6 +24,10 @@ GameManager="*uid://sqa60ate5t86"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+hazards=""
+
 [input]
 
 up={
