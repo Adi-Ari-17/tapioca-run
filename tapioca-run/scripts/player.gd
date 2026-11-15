@@ -31,6 +31,7 @@ func _physics_process(delta: float) -> void:
 				animation_player.play("down-bounce-pop")
 			elif state == "sugar":
 				animation_player.play("down-bounce-sugar")
+			GameManager.countdown -= 1
 			velocity.y = -325.0
 		if Input.is_action_just_pressed("up"):
 			if state == "normal":
