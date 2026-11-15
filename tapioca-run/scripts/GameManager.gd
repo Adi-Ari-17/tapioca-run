@@ -8,3 +8,4 @@ var countdown: int = 0
 var count_max: int = 50000
 var timecost: int = 5
 var first_time: bool = true
+var player_state: String = "normal"
