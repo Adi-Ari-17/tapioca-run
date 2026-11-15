@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 signal menu_load
+signal game_start
 @onready var timelabel: Label = $countdown/Label
 @onready var coinlabel: Label = $Coins
 @onready var costlabel1: Label = $countdown/Label2
@@ -22,4 +23,7 @@ func _on_countdown_pressed() -> void:
 	if GameManager.coins >= GameManager.timecost:
 		GameManager.coins -= GameManager.timecost
 		GameManager.count_max += 5
-		GameManager.timecost += randf_range(3, 8)
+		GameManager.timecost += randi_range(3, 8)
+
+func _on_play_pressed() -> void:
+	game_start.emit()

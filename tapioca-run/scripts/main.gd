@@ -81,8 +81,14 @@ func return_to_menu() -> void:
 		transition_layer.fade_out()
 	menu_scene.game_start.connect(game_starting)
 	menu_scene.shop_load.connect(shop_load)
-	
+
 func shop_load() -> void:
+	GameManager.controls_allowed = false
+	if player:
+		player.hide()
+		player.set_physics_process(false)
+	if hud:
+		hud.hide()
 	if transition_layer:
 		await transition_layer.fade_in()
 	for child in level_node.get_children():
@@ -92,3 +98,5 @@ func shop_load() -> void:
 	if transition_layer:
 		transition_layer.fade_out()
 	shop_scene.menu_load.connect(return_to_menu)
+	shop_scene.game_start.connect(game_starting)
+	

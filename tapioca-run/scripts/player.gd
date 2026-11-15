@@ -57,7 +57,7 @@ func _on_animation_finished(anim_name: StringName) -> void:
 
 func _on_hurbox_entered(area: Area2D) -> void:
 	if area.is_in_group("hazards"):
-		var dir := Input.get_axis("left", "right")
+		#var dir := Input.get_axis("left", "right")
 		GameManager.controls_allowed = false
 		velocity = Vector2(300, -400)
 		await get_tree().create_timer(0.5).timeout

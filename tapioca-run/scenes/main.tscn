@@ -91,4 +91,4 @@ position = Vector2(226, 112)
 [node name="countdown" parent="GUI" unique_id=1009133850 instance=ExtResource("5_tbgi4")]
 
 [connection signal="countstart" from="." to="GUI/countdown" method="_on_main_countstart"]
-[connection signal="return_to_menu" from="GUI/countdown" to="." method="return_to_menu"]
+[connection signal="shop_load" from="GUI/countdown" to="." method="shop_load"]
