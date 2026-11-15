@@ -6,7 +6,7 @@ var waiting: bool = false
 var counting
   
 func _ready() -> void:
-	
+	pass
 func _process(_delta: float) -> void:
 	if counting:
 		if not waiting:

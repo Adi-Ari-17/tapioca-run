@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://cx3vv8aw2mirp"]
 
+[ext_resource type="Script" uid="uid://15e3vgl2xjrq" path="res://scripts/shop.gd" id="1_lx5au"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_xfvoa"]
 font_size = 55
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
-[node name="shop" type="Node2D" unique_id=576937566]
+[node name="shop" type="CanvasLayer" unique_id=1384893480]
+script = ExtResource("1_lx5au")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1258653488]
 anchors_preset = 15
@@ -51,7 +54,7 @@ offset_bottom = 140.0
 text = "Shop"
 label_settings = SubResource("LabelSettings_xfvoa")
 
-[node name="Button" type="Button" parent="." unique_id=1563835025]
+[node name="back" type="Button" parent="." unique_id=1563835025]
 anchors_preset = -1
 anchor_right = 0.011000001
 anchor_bottom = 0.055000003
@@ -60,3 +63,5 @@ offset_top = 545.0
 offset_right = 152.328
 offset_bottom = 571.36
 text = "Back"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

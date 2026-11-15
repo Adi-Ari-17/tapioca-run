@@ -22,6 +22,7 @@ func load_menu() -> void:
 	var menu_scene = load("res://scenes/menu.tscn").instantiate()
 	level_node.add_child(menu_scene)
 	menu_scene.game_start.connect(game_starting)
+	menu_scene.shop_load.connect(shop_load)
 	hud.hide()
 	countdown.hide()
 
@@ -75,4 +76,14 @@ func return_to_menu() -> void:
 	if transition_layer:
 		transition_layer.fade_out()
 	menu_scene.game_start.connect(game_starting)
+	
+func shop_load() -> void:
+	if transition_layer:
+		await transition_layer.fade_in()
+	for child in level_node.get_children():
+		child.queue_free()
+	var shop_scene = load("res://scenes/shop.tscn").instantiate()
+	level_node.add_child(shop_scene)
+	if transition_layer:
+		transition_layer.fade_out()
 	
