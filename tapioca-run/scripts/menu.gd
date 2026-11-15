@@ -3,7 +3,6 @@ extends CanvasLayer
 signal game_start
 signal shop_load
 
-
 func _on_start_pressed() -> void:
 	game_start.emit()
 

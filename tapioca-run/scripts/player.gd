@@ -153,3 +153,9 @@ func _on_hurbox_entered(area: Area2D) -> void:
 			cam.offset = Vector2.ZERO
 		await get_tree().create_timer(0.5).timeout
 		GameManager.controls_allowed = true
+		
+func change_camera_limits(x1: int, y1: int, x2: int, y2: int) -> void:
+	$Camera2D.limit_left = x1
+	$Camera2D.limit_top = y1
+	$Camera2D.limit_right = x2
+	$Camera2D.limit_bottom = y2

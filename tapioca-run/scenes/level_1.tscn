@@ -1605,4 +1605,7 @@ position = Vector2(2860, -366)
 scale = Vector2(1.3125, 3.5468755)
 texture = ExtResource("6_fcfvj")
 
+[node name="Node2D" type="Node2D" parent="." unique_id=39094631]
+position = Vector2(2879, 708)
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
