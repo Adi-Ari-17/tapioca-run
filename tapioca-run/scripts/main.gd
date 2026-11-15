@@ -31,12 +31,7 @@ func game_starting() -> void:
 	if player:
 		player.set_physics_process(true)
 	change_level(GameManager.current_level, GameManager.spawn_pos)
-	if countdown:
-		countdown.show()
-		print(GameManager.countdown)
-		countstart.emit()
-	if hud:
-		hud.show()
+	
 
 func change_level(level: String, spawn_pos: Vector2) -> void:
 	GameManager.controls_allowed = false
@@ -54,6 +49,12 @@ func change_level(level: String, spawn_pos: Vector2) -> void:
 	if new_level:
 		current_level_node = new_level.instantiate()
 		level_node.add_child(current_level_node)
+	if countdown:
+		countdown.show()
+		print(GameManager.countdown)
+		countstart.emit()
+	if hud:
+		hud.show()
 	if player:
 		player.set_physics_process(true)
 		player.process_mode = Node.PROCESS_MODE_INHERIT
@@ -79,6 +80,7 @@ func return_to_menu() -> void:
 	if transition_layer:
 		transition_layer.fade_out()
 	menu_scene.game_start.connect(game_starting)
+	menu_scene.shop_load.connect(shop_load)
 	
 func shop_load() -> void:
 	if transition_layer:
@@ -89,4 +91,4 @@ func shop_load() -> void:
 	level_node.add_child(shop_scene)
 	if transition_layer:
 		transition_layer.fade_out()
-	
+	shop_scene.menu_load.connect(return_to_menu)
