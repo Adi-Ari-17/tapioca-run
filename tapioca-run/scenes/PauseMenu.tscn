@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bpcy14gksxigi"]
+
+[ext_resource type="Script" uid="uid://7ikdiy8tvje4" path="res://scenes/pause_menu.gd" id="1_jvnd5"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=166030971]
+script = ExtResource("1_jvnd5")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=801312467]
+modulate = Color(1, 1, 1, 0.40784314)
+z_index = 50
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0.69409156, 0.5130105, 0.44803417, 1)
+
+[node name="menu" type="Button" parent="." unique_id=502087789]
+z_index = 50
+offset_left = 474.0
+offset_top = 219.0
+offset_right = 687.0
+offset_bottom = 290.0
+text = "Main Menu"
+
+[node name="shop" type="Button" parent="." unique_id=688440358]
+z_index = 50
+offset_left = 473.0
+offset_top = 352.0
+offset_right = 687.0
+offset_bottom = 425.0
+text = "Shop"
+
+[node name="resume" type="Button" parent="." unique_id=2118442047]
+z_index = 50
+offset_left = 497.0
+offset_top = 104.0
+offset_right = 650.0
+offset_bottom = 181.0
+text = "Resume
+"
+
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="resume" to="." method="_on_resume_pressed"]

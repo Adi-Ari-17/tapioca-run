@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://x661kf0eeiky" path="res://scripts/transition_layer.gd" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dacxtg0q5x3a8" path="res://scenes/hud.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://5ehdhn86s5s7" path="res://scenes/countdown.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://bpcy14gksxigi" path="res://scenes/PauseMenu.tscn" id="6_tefeu"]
 
 [sub_resource type="Animation" id="Animation_sugp2"]
 length = 0.001
@@ -193,5 +194,9 @@ position = Vector2(226, 112)
 
 [node name="countdown" parent="GUI" unique_id=1009133850 instance=ExtResource("5_tbgi4")]
 
+[node name="CanvasLayer" parent="." unique_id=166030971 instance=ExtResource("6_tefeu")]
+
 [connection signal="countstart" from="." to="GUI/countdown" method="_on_main_countstart"]
 [connection signal="shop_load" from="GUI/countdown" to="." method="shop_load"]
+[connection signal="menu_load" from="CanvasLayer" to="." method="load_menu"]
+[connection signal="shop_load" from="CanvasLayer" to="." method="shop_load"]
