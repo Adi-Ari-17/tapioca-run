@@ -84,13 +84,10 @@ func try_switch_state() -> void:
 	if GameManager.countdown >= 50:
 		var current_index = GameManager.unlocked_states.find(GameManager.player_state)
 		if current_index != -1 and GameManager.unlocked_states.size() > 1:
-			GameManager.countdown -= 50
+			GameManager.countdown -= 10
 			var next_index = (current_index + 1) % GameManager.unlocked_states.size()
 			GameManager.player_state = GameManager.unlocked_states[next_index]
-			
 			update_animation()
-	else:
-		print("Not enough countdown to switch states!")
 
 func update_animation() -> void:
 	if GameManager.player_state == "normal":
