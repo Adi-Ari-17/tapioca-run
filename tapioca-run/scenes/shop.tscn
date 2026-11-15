@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://cx3vv8aw2mirp"]
 
-[ext_resource type="Script" uid="uid://15e3vgl2xjrq" path="res://scripts/shop.gd" id="1_lx5au"]
+[ext_resource type="Script" uid="uid://15e3vgl2xjrq" path="res://scripts/Shop.gd" id="1_lx5au"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6mc5i"]
-font_size = 12
+font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_e1o86"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xfvoa"]
 font_size = 55
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lx5au"]
+font_size = 30
 
 [node name="shop" type="CanvasLayer" unique_id=1384893480]
 script = ExtResource("1_lx5au")
@@ -26,15 +31,25 @@ offset_left = 306.0
 offset_top = 210.0
 offset_right = 493.0
 offset_bottom = 329.0
-text = "Countdown"
+text = "Add countdown (5)"
 
 [node name="Label" type="Label" parent="countdown" unique_id=1865517147]
 layout_mode = 0
-offset_left = 72.0
-offset_top = 74.0
-offset_right = 112.0
-offset_bottom = 97.0
+offset_left = 53.0
+offset_top = 76.0
+offset_right = 146.0
+offset_bottom = 99.0
+text = "current time: 10"
 label_settings = SubResource("LabelSettings_6mc5i")
+
+[node name="Label2" type="Label" parent="countdown" unique_id=41529552]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 24.0
+offset_right = 117.0
+offset_bottom = 47.0
+text = "cost: 5"
+label_settings = SubResource("LabelSettings_e1o86")
 
 [node name="idk2" type="Button" parent="." unique_id=605792678]
 offset_left = 573.0
@@ -74,6 +89,15 @@ offset_top = 545.0
 offset_right = 152.328
 offset_bottom = 571.36
 text = "Back"
+
+[node name="Coins" type="Label" parent="." unique_id=105335456]
+offset_left = 491.0
+offset_top = 74.0
+offset_right = 616.0
+offset_bottom = 116.0
+text = "coins: 67"
+label_settings = SubResource("LabelSettings_lx5au")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="countdown" to="." method="_on_countdown_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]

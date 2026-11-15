@@ -6,4 +6,4 @@ var spawn_pos: Vector2 = Vector2(0, 0)
 var coins: int = 0
 var countdown: int = 0
 var count_max: int = 11
-var menu: bool = false
+var timecost: int = 5
