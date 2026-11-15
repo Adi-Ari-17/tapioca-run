@@ -80,7 +80,7 @@ offset_left = 61.0
 offset_top = 21.0
 offset_right = 111.0
 offset_bottom = 44.0
-text = "cost: -100-"
+text = "cost: -50-"
 label_settings = SubResource("LabelSettings_e1o86")
 
 [node name="Pearl2" type="Button" parent="." unique_id=962100626]
@@ -96,7 +96,7 @@ offset_left = 60.0
 offset_top = 20.0
 offset_right = 110.0
 offset_bottom = 43.0
-text = "cost: -150-"
+text = "cost: -75-"
 label_settings = SubResource("LabelSettings_e1o86")
 
 [node name="Label" type="Label" parent="." unique_id=1937225955]

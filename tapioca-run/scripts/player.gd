@@ -8,6 +8,8 @@ const WALL_COOLDOWN_DURATION: float = 2.0
 var was_wall_sliding: bool = false
 var wall_time_elapsed: float = 0.0
 const WALL_GRACE_PERIOD: float = 0.25
+var was_airborne: bool = false
+
 @onready var cam: Camera2D = $Camera2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var hitfx: GPUParticles2D = $HitFX/GPUParticles2D
@@ -25,7 +27,9 @@ func _physics_process(delta: float) -> void:
 		wall_progress_bar.value = wall_cooldown_timer
 	else:
 		wall_progress_bar.visible = false
+
 	if not is_on_floor():
+		was_airborne = true
 		velocity += get_gravity() * delta
 	else:
 		can_double_jump = true
@@ -33,20 +37,37 @@ func _physics_process(delta: float) -> void:
 			wall_cooldown_timer = WALL_COOLDOWN_DURATION
 		was_wall_sliding = false
 		wall_time_elapsed = 0.0
+		
+		# Ground landing bounce (triggers once on landing)
+		if was_airborne and touched_floor:
+			play_bounce_animation()
+			if GameManager.player_state == "sugar":
+				velocity.y = -250.0 
+				GameManager.countdown -= 1
+			else:
+				GameManager.countdown -= 1
+				velocity.y = -325.0 
+			was_airborne = false
 
 	if GameManager.controls_allowed == true:
 		var direction := Input.get_axis("left", "right")
 		var can_wall_slide = not is_on_floor() and is_on_wall() and GameManager.player_state == "sugar" and wall_cooldown_timer <= 0
 		var is_pushing_against_wall = (direction < 0 and $Sprite2D.flip_h) or (direction > 0 and not $Sprite2D.flip_h)
+		
 		if can_wall_slide and (is_pushing_against_wall or Input.is_action_pressed("up") or Input.is_action_pressed("down")):
 			was_wall_sliding = true
 			wall_time_elapsed += delta 
+			
+			if animation_player.current_animation != "SideStick sugar":
+				animation_player.play("SideStick sugar")
+				
 			if Input.is_action_pressed("up"):
 				velocity.y = -150.0 
 			elif Input.is_action_pressed("down"):
 				velocity.y = 150.0 
 			else:
 				velocity.y = min(velocity.y, 40.0)
+				
 			if direction != 0:
 				velocity.x = direction * SPEED
 				$Sprite2D.flip_h = (direction < 0)
@@ -58,23 +79,22 @@ func _physics_process(delta: float) -> void:
 					wall_cooldown_timer = WALL_COOLDOWN_DURATION
 				was_wall_sliding = false
 				wall_time_elapsed = 0.0
+				
+			if animation_player.current_animation == "SideStick sugar":
+				update_animation()
+
 			if direction:
 				velocity.x = direction * SPEED
 				$Sprite2D.flip_h = (direction < 0) 
 			else:
 				velocity.x = move_toward(velocity.x, 0, SPEED)
-		if is_on_floor() and touched_floor:
-			play_bounce_animation()
-			if GameManager.player_state == "sugar":
-				velocity.y = -250.0 
-				GameManager.countdown -= 1
-			else:
-				GameManager.countdown -= 1
-				velocity.y = -325.0 
+				
 		if Input.is_action_just_pressed("up") and not is_on_floor():
 			if GameManager.player_state == "pop" and can_double_jump:
 				velocity.y = -280.0
 				can_double_jump = false 
+				animation_player.play("double jump pop")
+				
 		if Input.is_action_just_pressed("interact"):
 			try_switch_state()
 			
@@ -84,7 +104,7 @@ func try_switch_state() -> void:
 	if GameManager.countdown >= 50:
 		var current_index = GameManager.unlocked_states.find(GameManager.player_state)
 		if current_index != -1 and GameManager.unlocked_states.size() > 1:
-			GameManager.countdown -= 10
+			GameManager.countdown -= 50
 			var next_index = (current_index + 1) % GameManager.unlocked_states.size()
 			GameManager.player_state = GameManager.unlocked_states[next_index]
 			update_animation()
@@ -112,6 +132,8 @@ func _on_animation_finished(anim_name: StringName) -> void:
 		animation_player.play("idle-pop")
 	elif anim_name == "down-bounce-sugar":
 		animation_player.play("idle-sugar")
+	elif anim_name == "double jump pop":
+		animation_player.play("idle-pop")
 
 func _on_hurbox_entered(area: Area2D) -> void:
 	if area.is_in_group("hazards"):

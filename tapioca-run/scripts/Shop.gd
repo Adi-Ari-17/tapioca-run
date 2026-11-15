@@ -22,16 +22,20 @@ func _on_back_pressed() -> void:
 func _on_countdown_pressed() -> void:
 	if GameManager.coins >= GameManager.timecost:
 		GameManager.coins -= GameManager.timecost
-		GameManager.count_max += 5
+		GameManager.count_max += 10
 		GameManager.timecost += randi_range(3, 8)
 
 func _on_play_pressed() -> void:
 	game_start.emit()
 
 func _on_pearl_1_pressed() -> void:
-	GameManager.unlocked_states.append("pop")
-	$Pearl1.disabled = true
+	if GameManager.coins >= 50:
+		GameManager.unlocked_states.append("pop")
+		$Pearl1.disabled = true
+		GameManager.coins -= 50
 
 func _on_pearl_2_pressed() -> void:
-	GameManager.unlocked_states.append("sugar")
-	$Pearl2.disabled = true
+	if GameManager.coins >= 75:
+		GameManager.unlocked_states.append("sugar")
+		$Pearl2.disabled = true
+		GameManager.coins -= 75
