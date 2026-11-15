@@ -6,7 +6,6 @@ signal shop_load
 
 func _on_start_pressed() -> void:
 	game_start.emit()
-	print("menu start?")
 
 func _on_credits_pressed() -> void:
 	pass
