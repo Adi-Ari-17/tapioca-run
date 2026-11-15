@@ -36,10 +36,12 @@ func change_level(level: String, spawn_pos: Vector2) -> void:
 		hud.hide()
 	if player:
 		player.hide()
+		player.velocity = Vector2.ZERO
+		player.wall_cooldown_timer = 0
 		player.set_physics_process(false)
-		player.global_position = spawn_pos
 	if transition_layer:
 		await transition_layer.fade_in()
+	player.global_position = spawn_pos
 	for child in level_node.get_children():
 		child.queue_free()
 	var new_level = load(level)
