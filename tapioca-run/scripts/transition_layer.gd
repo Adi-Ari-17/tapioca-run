@@ -6,7 +6,6 @@ extends Node
 func fade_in() -> void:
 	if GameManager.first_time:
 		animation_player.play("first timey")
-		GameManager.first_time = false
 	else:
 		animation_player.play("fade in")
 	await animation_player.animation_finished

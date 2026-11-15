@@ -27,8 +27,6 @@ func load_menu() -> void:
 	countdown.hide()
 
 func game_starting() -> void:
-	if GameManager.first_time:
-		pass
 	change_level(GameManager.current_level, GameManager.spawn_pos)
 	
 

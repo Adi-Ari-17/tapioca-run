@@ -13,6 +13,7 @@ func _process(_delta: float) -> void:
 	if counting:
 		label.text = str(GameManager.countdown)
 		if GameManager.countdown <= 0:
+			GameManager.first_time = false
 			shop_load.emit()
 			counting = false
 			hide()

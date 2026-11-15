@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cu2auupgsreqd"]
 
+[ext_resource type="Script" uid="uid://bsiyw833jem8d" path="res://scripts/level_1.gd" id="1_4nkto"]
 [ext_resource type="Texture2D" uid="uid://c6vohh1i75cmc" path="res://assets/sprites/Buildings BG.png" id="1_rus8k"]
 [ext_resource type="TileSet" uid="uid://dxrqhowa2v405" path="res://assets/other/concretetiles.tres" id="2_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://bfebo7q2u2tkk" path="res://scenes/coins.tscn" id="2_bswci"]
@@ -8,7 +9,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6mc5i"]
 size = Vector2(128, 7)
 
+[sub_resource type="LabelSettings" id="LabelSettings_fcfvj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_flyrt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_irfqh"]
+
 [node name="level1" type="Node2D" unique_id=1795356896]
+script = ExtResource("1_4nkto")
 
 [node name="background" type="Node2D" parent="." unique_id=1268637524]
 
@@ -1541,3 +1549,28 @@ shape = SubResource("RectangleShape2D_6mc5i")
 position = Vector2(2767, -284.3)
 scale = Vector2(2, 2)
 texture = ExtResource("4_5xbjy")
+
+[node name="Label" type="Label" parent="." unique_id=823266577]
+offset_left = 658.0
+offset_top = 12.0
+offset_right = 1076.0
+offset_bottom = 61.0
+text = "the big scary numbers are the 
+amount of bounces left"
+label_settings = SubResource("LabelSettings_fcfvj")
+
+[node name="Label2" type="Label" parent="." unique_id=366660989]
+offset_left = -42.0
+offset_top = 4.0
+offset_right = 245.0
+offset_bottom = 27.0
+text = "use the arrow keys or WASD to move"
+label_settings = SubResource("LabelSettings_flyrt")
+
+[node name="Label3" type="Label" parent="." unique_id=783715129]
+offset_left = 1074.0
+offset_top = -57.0
+offset_right = 1305.0
+offset_bottom = -34.0
+text = "spikes decrease your bounces"
+label_settings = SubResource("LabelSettings_irfqh")
