@@ -33,6 +33,7 @@ func game_starting() -> void:
 	change_level(GameManager.current_level, GameManager.spawn_pos)
 	if countdown:
 		countdown.show()
+		print(GameManager.countdown)
 		countstart.emit()
 	if hud:
 		hud.show()

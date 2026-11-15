@@ -7,8 +7,8 @@ var waiting: bool = false
 var counting
   
 func _ready() -> void:
-	print(main)
-	#main.countstart.connect(_on_main_countstart)
+	main = get_tree().root.get_node("Main")
+	main.countstart.connect(_on_main_countstart)
 
 func _process(_delta: float) -> void:
 	if counting:
@@ -17,8 +17,9 @@ func _process(_delta: float) -> void:
 			label.text = str(GameManager.countdown)
 			if GameManager.countdown <= 0:
 				return_to_menu.emit()
+				main.countstart.connect(_on_main_countstart)
 				counting = false
-				queue_free()
+				hide()
 		_trigger()
 
 func _trigger() -> void:
@@ -32,4 +33,3 @@ func _on_main_countstart() -> void:
 	counting = true
 	label.text = str(GameManager.countdown)
 	GameManager.countdown = GameManager.count_max
-	print(GameManager.countdown)
