@@ -27,7 +27,6 @@ func load_menu() -> void:
 	countdown.hide()
 
 func game_starting() -> void:
-	print("game start")
 	if GameManager.first_time:
 		pass
 	change_level(GameManager.current_level, GameManager.spawn_pos)
@@ -51,7 +50,6 @@ func change_level(level: String, spawn_pos: Vector2) -> void:
 		level_node.add_child(current_level_node)
 	if countdown:
 		countdown.show()
-		print(GameManager.countdown)
 		countstart.emit()
 	if hud:
 		hud.show()

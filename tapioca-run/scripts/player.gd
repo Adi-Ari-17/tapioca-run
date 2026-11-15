@@ -2,11 +2,9 @@ extends CharacterBody2D
 
 var state: String = "normal"
 const SPEED = 200.0
-var touched_floor: = true
-var prev_velocity = 0.0
-var jump_buffer_timer: float = 0.0
-var jump_buffer_duration: float = 0.12
+var touched_floor = true
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var hitfx: GPUParticles2D = $HitFX/GPUParticles2D
 
 func _ready() -> void:
 	if state == "normal":
@@ -17,11 +15,7 @@ func _ready() -> void:
 		animation_player.play("idle-sugar")
 
 func _physics_process(delta: float) -> void:
-	print(GameManager.controls_allowed)
-	if jump_buffer_timer > 0.0:
-		jump_buffer_timer -= delta
 	if not is_on_floor():
-		prev_velocity = velocity.y
 		velocity += get_gravity() * delta
 	if GameManager.controls_allowed == true:
 		var direction := Input.get_axis("left", "right")
@@ -57,9 +51,11 @@ func _on_animation_finished(anim_name: StringName) -> void:
 
 func _on_hurbox_entered(area: Area2D) -> void:
 	if area.is_in_group("hazards"):
-		#var dir := Input.get_axis("left", "right")
 		GameManager.controls_allowed = false
-		velocity = Vector2(300, -400)
+		var dir = 1 if randf() > 0.5 else -1
+		velocity = Vector2(-200 * dir, -300)
+		GameManager.countdown -= 10
+		hitfx.restart()
 		await get_tree().create_timer(0.5).timeout
 		GameManager.controls_allowed = true
 		
