@@ -28,6 +28,10 @@ func _on_countdown_pressed() -> void:
 func _on_play_pressed() -> void:
 	game_start.emit()
 
-
 func _on_pearl_1_pressed() -> void:
 	GameManager.unlocked_states.append("pop")
+	$Pearl1.disabled = true
+
+func _on_pearl_2_pressed() -> void:
+	GameManager.unlocked_states.append("sugar")
+	$Pearl2.disabled = true

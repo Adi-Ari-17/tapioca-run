@@ -56,21 +56,48 @@ offset_left = 573.0
 offset_top = 382.0
 offset_right = 760.0
 offset_bottom = 501.0
-text = "idk"
+text = "Gain Infinite Aura"
+
+[node name="Label6" type="Label" parent="idk2" unique_id=949135445]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 21.0
+offset_right = 133.0
+offset_bottom = 44.0
+text = "cost: -5000-"
+label_settings = SubResource("LabelSettings_e1o86")
 
 [node name="Pearl1" type="Button" parent="." unique_id=2065725093]
 offset_left = 308.0
 offset_top = 382.0
 offset_right = 492.0
 offset_bottom = 497.0
-text = "New Pearl"
+text = "New Pearl (pop)"
 
-[node name="idk" type="Button" parent="." unique_id=962100626]
+[node name="Label4" type="Label" parent="Pearl1" unique_id=869535574]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 21.0
+offset_right = 111.0
+offset_bottom = 44.0
+text = "cost: -100-"
+label_settings = SubResource("LabelSettings_e1o86")
+
+[node name="Pearl2" type="Button" parent="." unique_id=962100626]
 offset_left = 577.0
 offset_top = 205.0
 offset_right = 754.0
 offset_bottom = 322.0
-text = "idk"
+text = "New Pearl (sugar)"
+
+[node name="Label5" type="Label" parent="Pearl2" unique_id=24980159]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 20.0
+offset_right = 110.0
+offset_bottom = 43.0
+text = "cost: -150-"
+label_settings = SubResource("LabelSettings_e1o86")
 
 [node name="Label" type="Label" parent="." unique_id=1937225955]
 offset_left = 97.0
@@ -108,5 +135,6 @@ text = "Play"
 
 [connection signal="pressed" from="countdown" to="." method="_on_countdown_pressed"]
 [connection signal="pressed" from="Pearl1" to="." method="_on_pearl_1_pressed"]
+[connection signal="pressed" from="Pearl2" to="." method="_on_pearl_2_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

@@ -279,7 +279,6 @@ explosiveness = 0.75
 process_material = SubResource("ParticleProcessMaterial_4nkto")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=388964357]
-modulate = Color(0.8836062, 0, 0.2988683, 1)
 z_index = 30
 offset_left = -43.0
 offset_top = -47.0
