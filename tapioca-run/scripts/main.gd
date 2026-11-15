@@ -6,6 +6,7 @@ extends Node2D
 @onready var current_level_node: Node = null
 @onready var countdown: Node = $GUI/countdown
 @onready var hud: Node = $GUI/hud
+signal countstart
 
 func _ready() -> void:
 	if player:
@@ -16,25 +17,22 @@ func _ready() -> void:
 	if hud:
 		hud.hide()
 	load_menu()
-	
-	
-func _physics_process(delta: float) -> void:
-	if GameManager.menu:
-		GameManager.menu = false
-		load_menu()
-		
+
 func load_menu() -> void:
 	var menu_scene = load("res://scenes/menu.tscn").instantiate()
 	level_node.add_child(menu_scene)
 	menu_scene.game_start.connect(game_starting)
+	hud.hide()
+	countdown.hide()
 
 func game_starting() -> void:
+	print("game start")
 	if player:
 		player.set_physics_process(true)
 	change_level(GameManager.current_level, GameManager.spawn_pos)
 	if countdown:
 		countdown.show()
-		GameManager.countstart = true
+		countstart.emit()
 	if hud:
 		hud.show()
 
@@ -76,4 +74,5 @@ func return_to_menu() -> void:
 	level_node.add_child(menu_scene)
 	if transition_layer:
 		transition_layer.fade_out()
+	menu_scene.game_start.connect(game_starting)
 	

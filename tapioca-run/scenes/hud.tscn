@@ -5,7 +5,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_6mc5i"]
 
-[node name="Node2D" type="Node2D" unique_id=1661951141]
+[node name="hud" type="Node2D" unique_id=1097955973]
 scale = Vector2(2, 2)
 script = ExtResource("1_oo0fn")
 

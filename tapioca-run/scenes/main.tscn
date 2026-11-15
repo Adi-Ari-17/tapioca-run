@@ -84,10 +84,10 @@ color = Color(0, 0, 0, 1)
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_tefeu")
 
-[node name="countdown" parent="GUI" unique_id=1009133850 instance=ExtResource("5_tbgi4")]
-position = Vector2(-4, 8)
-
 [node name="hud" parent="GUI" unique_id=1661951141 instance=ExtResource("4_jyhfs")]
-position = Vector2(107, 48)
+position = Vector2(226, 112)
 
+[node name="countdown" parent="GUI" unique_id=1009133850 instance=ExtResource("5_tbgi4")]
+
+[connection signal="countstart" from="." to="GUI/countdown" method="_on_main_countstart"]
 [connection signal="return_to_menu" from="GUI/countdown" to="." method="return_to_menu"]

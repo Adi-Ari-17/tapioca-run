@@ -1,55 +1,49 @@
 [gd_scene format=3 uid="uid://cx3vv8aw2mirp"]
 
-[ext_resource type="Script" uid="uid://biw1ogn457f1r" path="res://scripts/Shop.gd" id="1_lx5au"]
-
 [sub_resource type="LabelSettings" id="LabelSettings_xfvoa"]
 font_size = 55
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
-[node name="shop" type="Node2D" unique_id=1761433747]
+[node name="shop" type="Node2D" unique_id=576937566]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=93764978]
-script = ExtResource("1_lx5au")
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1258653488]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1258653488]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.69409156, 0.5130105, 0.44803417, 1)
-metadata/_edit_use_anchors_ = true
 
-[node name="countdown" type="Button" parent="CanvasLayer" unique_id=1999365787]
+[node name="countdown" type="Button" parent="." unique_id=1999365787]
 offset_left = 306.0
 offset_top = 210.0
 offset_right = 493.0
 offset_bottom = 329.0
 text = "Countdown"
 
-[node name="idk2" type="Button" parent="CanvasLayer" unique_id=605792678]
+[node name="idk2" type="Button" parent="." unique_id=605792678]
 offset_left = 573.0
 offset_top = 382.0
 offset_right = 760.0
 offset_bottom = 501.0
 text = "idk"
 
-[node name="Pearl" type="Button" parent="CanvasLayer" unique_id=2065725093]
+[node name="Pearl" type="Button" parent="." unique_id=2065725093]
 offset_left = 308.0
 offset_top = 382.0
 offset_right = 492.0
 offset_bottom = 497.0
 text = "New Pearl"
 
-[node name="idk" type="Button" parent="CanvasLayer" unique_id=962100626]
+[node name="idk" type="Button" parent="." unique_id=962100626]
 offset_left = 577.0
 offset_top = 205.0
 offset_right = 754.0
 offset_bottom = 322.0
 text = "idk"
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=1937225955]
+[node name="Label" type="Label" parent="." unique_id=1937225955]
 offset_left = 97.0
 offset_top = 64.0
 offset_right = 421.0
@@ -57,7 +51,7 @@ offset_bottom = 140.0
 text = "Shop"
 label_settings = SubResource("LabelSettings_xfvoa")
 
-[node name="Button" type="Button" parent="CanvasLayer" unique_id=1563835025]
+[node name="Button" type="Button" parent="." unique_id=1563835025]
 anchors_preset = -1
 anchor_right = 0.011000001
 anchor_bottom = 0.055000003
@@ -66,5 +60,3 @@ offset_top = 545.0
 offset_right = 152.328
 offset_bottom = 571.36
 text = "Back"
-
-[connection signal="pressed" from="CanvasLayer/countdown" to="CanvasLayer" method="_on_countdown_pressed"]

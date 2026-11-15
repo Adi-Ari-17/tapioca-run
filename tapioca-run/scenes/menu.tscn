@@ -7,28 +7,25 @@ font_size = 55
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
-[node name="menu" type="Node2D" unique_id=1028276986]
+[node name="menu" type="CanvasLayer" unique_id=1306010076]
 script = ExtResource("1_yqeox")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1967712606]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1910807541]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1910807541]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.69409156, 0.5130105, 0.44803417, 1)
-metadata/_edit_use_anchors_ = true
 
-[node name="start" type="Button" parent="CanvasLayer" unique_id=1798391521]
+[node name="start" type="Button" parent="." unique_id=1798391521]
 offset_left = 129.0
 offset_top = 341.0
 offset_right = 225.0
 offset_bottom = 372.0
 text = "Start Game"
 
-[node name="credits" type="Button" parent="CanvasLayer" unique_id=1501865723]
+[node name="credits" type="Button" parent="." unique_id=1501865723]
 offset_left = 144.0
 offset_top = 401.0
 offset_right = 205.0
@@ -36,14 +33,14 @@ offset_bottom = 432.0
 text = "credits
 "
 
-[node name="shop" type="Button" parent="CanvasLayer" unique_id=944355835]
+[node name="shop" type="Button" parent="." unique_id=944355835]
 offset_left = 140.0
 offset_top = 453.0
 offset_right = 209.0
 offset_bottom = 484.0
 text = "Shop"
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=1941178479]
+[node name="Label" type="Label" parent="." unique_id=1941178479]
 offset_left = 380.0
 offset_top = 195.0
 offset_right = 704.0
@@ -51,6 +48,6 @@ offset_bottom = 271.0
 text = "Tapioca Run"
 label_settings = SubResource("LabelSettings_6mc5i")
 
-[connection signal="pressed" from="CanvasLayer/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="CanvasLayer/credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="CanvasLayer/shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="shop" to="." method="_on_shop_pressed"]
