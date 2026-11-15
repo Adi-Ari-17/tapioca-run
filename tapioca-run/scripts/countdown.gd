@@ -1,12 +1,15 @@
 extends Node2D
 
 @onready var label: Label = $Label
+@onready var main: Node2D = $"../Main"
 signal return_to_menu
 var waiting: bool = false
 var counting
   
 func _ready() -> void:
-	pass
+	print(main)
+	#main.countstart.connect(_on_main_countstart)
+
 func _process(_delta: float) -> void:
 	if counting:
 		if not waiting:

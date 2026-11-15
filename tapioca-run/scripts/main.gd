@@ -39,9 +39,12 @@ func game_starting() -> void:
 
 func change_level(level: String, spawn_pos: Vector2) -> void:
 	GameManager.controls_allowed = false
+	if hud:
+		hud.hide()
 	if player:
 		player.hide()
 		player.set_physics_process(false)
+		player.global_position = spawn_pos
 	if transition_layer:
 		await transition_layer.fade_in()
 	for child in level_node.get_children():
@@ -52,7 +55,6 @@ func change_level(level: String, spawn_pos: Vector2) -> void:
 		level_node.add_child(current_level_node)
 	if player:
 		player.set_physics_process(true)
-		player.global_position = spawn_pos
 		player.process_mode = Node.PROCESS_MODE_INHERIT
 		player.show()
 	if transition_layer:
